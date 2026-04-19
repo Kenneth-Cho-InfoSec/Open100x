@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="camera_surface">#000000</color>
+    <color name="detail_text">#CCFFFFFF</color>
+    <color name="bar_black">#F0000000</color>
+    <color name="panel_scrim_color">#E6000000</color>
+    <color name="violet_primary">#C4B5FD</color>
+    <color name="violet_active">#7C3AED</color>
+    <color name="violet_container">#332A145C</color>
+    <color name="slider_halo">#557C3AED</color>
+    <color name="slider_inactive">#55FFFFFF</color>
+    <color name="preset_button_bg">#221A102E</color>
+    <color name="preset_button_stroke">#88C4B5FD</color>
+    <color name="control_button_bg">#2FFFFFFF</color>
+    <color name="shutter_bg">#FFFFFFFF</color>
+    <color name="shutter_text">#FF111111</color>
+</resources>

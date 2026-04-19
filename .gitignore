@@ -1,0 +1,31 @@
+/.gradle/
+/build/
+/app/build/
+
+# Android local/generated files
+local.properties
+**/local.properties
+**/.gradle/
+**/build/
+**/.idea/
+*.iml
+
+# Signing keys and release secrets
+keystore.properties
+**/keystore.properties
+*.keystore
+*.jks
+*.p12
+*.pem
+
+# Build artifacts and local noise
+*.apk
+*.aab
+*.ap_
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+Thumbs.db
+.DS_Store

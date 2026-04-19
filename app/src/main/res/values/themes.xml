@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ZoomHundred" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="bottomSheetDialogTheme">@style/Widget.ZoomHundred.BottomSheet</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.BottomSheet" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.ZoomHundred.BottomSheetModal</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.BottomSheetModal" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@color/bar_black</item>
+        <item name="android:backgroundTint">@color/bar_black</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.PresetButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="backgroundTint">@color/preset_button_bg</item>
+        <item name="strokeColor">@color/preset_button_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">19dp</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.PresetButtonActive" parent="Widget.ZoomHundred.PresetButton">
+        <item name="backgroundTint">#FFFFFFFF</item>
+        <item name="android:textColor">#FF111418</item>
+        <item name="strokeColor">#FFFFFFFF</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.ControlButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="backgroundTint">@color/control_button_bg</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:minHeight">44dp</item>
+        <item name="cornerRadius">22dp</item>
+        <item name="rippleColor">#33FFFFFF</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.ControlButtonActive" parent="Widget.ZoomHundred.ControlButton">
+        <item name="backgroundTint">@color/violet_primary</item>
+        <item name="android:textColor">#FF111418</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.ShutterButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/shutter_text</item>
+        <item name="backgroundTint">@color/shutter_bg</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="rippleColor">#33000000</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.ProButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/violet_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
+        <item name="backgroundTint">@color/violet_container</item>
+        <item name="strokeColor">@color/violet_primary</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="cornerRadius">22dp</item>
+        <item name="rippleColor">#55C4B5FD</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.ToggleChip" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:textColor">#CCFFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="backgroundTint">#22FFFFFF</item>
+        <item name="strokeColor">#44FFFFFF</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">17dp</item>
+        <item name="rippleColor">#33FFFFFF</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.ToggleChipActive" parent="Widget.ZoomHundred.ToggleChip">
+        <item name="backgroundTint">@color/violet_primary</item>
+        <item name="android:textColor">#FF111418</item>
+        <item name="strokeColor">@color/violet_primary</item>
+    </style>
+
+    <style name="Widget.ZoomHundred.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="colorAccent">@color/violet_primary</item>
+        <item name="thumbTint">#FFFFFFFF</item>
+        <item name="trackTint">#FF555555</item>
+    </style>
+</resources>

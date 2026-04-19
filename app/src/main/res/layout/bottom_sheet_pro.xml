@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#DD111418"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- drag handle -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="12dp"
+            android:background="#66FFFFFF"
+            android:backgroundTint="#66FFFFFF" />
+
+        <!-- ── EXPOSURE SECTION ───────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MANUAL EXPOSURE"
+                android:textColor="#99FFFFFF"
+                android:textSize="11sp"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchManualMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.ZoomHundred.Switch" />
+        </LinearLayout>
+
+        <!-- ISO row -->
+        <LinearLayout
+            android:id="@+id/rowIso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:text="ISO"
+                android:textColor="#CCFFFFFF"
+                android:textSize="13sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderIso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:valueFrom="0"
+                android:valueTo="8"
+                android:value="3"
+                android:stepSize="1"
+                app:haloColor="#44FFFFFF"
+                app:thumbColor="@android:color/white"
+                app:trackColorActive="@android:color/white"
+                app:trackColorInactive="#66FFFFFF"
+                app:labelBehavior="gone" />
+
+            <TextView
+                android:id="@+id/tvIsoValue"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="ISO 400"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Shutter row -->
+        <LinearLayout
+            android:id="@+id/rowShutter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:text="SS"
+                android:textColor="#CCFFFFFF"
+                android:textSize="13sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderShutter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:valueFrom="0"
+                android:valueTo="11"
+                android:value="5"
+                android:stepSize="1"
+                app:haloColor="#44FFFFFF"
+                app:thumbColor="@android:color/white"
+                app:trackColorActive="@android:color/white"
+                app:trackColorInactive="#66FFFFFF"
+                app:labelBehavior="gone" />
+
+            <TextView
+                android:id="@+id/tvShutterValue"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="1/60"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- ── WHITE BALANCE ─────────────────────────────── -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WHITE BALANCE"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:id="@+id/wbButtonGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" />
+        </HorizontalScrollView>
+
+        <!-- ── OVERLAYS ──────────────────────────────────── -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OVERLAYS"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFocusPeaking"
+                style="@style/Widget.ZoomHundred.ToggleChip"
+                android:text="Focus Peak" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHistogram"
+                style="@style/Widget.ZoomHundred.ToggleChip"
+                android:text="Histogram" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHud"
+                style="@style/Widget.ZoomHundred.ToggleChip"
+                android:text="HUD" />
+        </LinearLayout>
+
+        <!-- Grid mode -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGridNone"
+                style="@style/Widget.ZoomHundred.ToggleChip"
+                android:text="No Grid" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGridThirds"
+                style="@style/Widget.ZoomHundred.ToggleChip"
+                android:text="Thirds" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGridSquare"
+                style="@style/Widget.ZoomHundred.ToggleChip"
+                android:text="Square" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGridDiag"
+                style="@style/Widget.ZoomHundred.ToggleChip"
+                android:text="Diagonal" />
+        </LinearLayout>
+
+        <!-- ── ANTI-SHAKE ─────────────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ANTI-SHAKE SHUTTER"
+                android:textColor="#99FFFFFF"
+                android:textSize="11sp"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchAntiShake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.ZoomHundred.Switch" />
+        </LinearLayout>
+
+        <!-- ── OUTPUT FORMAT ─────────────────────────────── -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OUTPUT FORMAT"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFmtJpeg"
+                style="@style/Widget.ZoomHundred.ToggleChip"
+                android:text="JPEG" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFmtWebp"
+                style="@style/Widget.ZoomHundred.ToggleChip"
+                android:text="WebP" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Strip GPS from EXIF"
+                android:textColor="#CCFFFFFF"
+                android:textSize="14sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchStripGps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.ZoomHundred.Switch" />
+        </LinearLayout>
+
+        <!-- ── NIGHT UI ───────────────────────────────────── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="NIGHT UI (red tint)"
+                android:textColor="#99FFFFFF"
+                android:textSize="11sp"
+                android:letterSpacing="0.1" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchNightUi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.ZoomHundred.Switch" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="CAPTURE PROCESSING"
+            android:textColor="#99FFFFFF"
+            android:textSize="11sp"
+            android:letterSpacing="0.1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Shutter sound"
+                android:textColor="#CCFFFFFF"
+                android:textSize="14sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchShutterSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.ZoomHundred.Switch" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowShutterVolume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:text="Volume"
+                android:textColor="#CCFFFFFF"
+                android:textSize="13sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderShutterVolume"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:valueFrom="0"
+                android:valueTo="100"
+                android:value="80"
+                android:stepSize="5"
+                app:haloColor="#44FFFFFF"
+                app:thumbColor="@android:color/white"
+                app:trackColorActive="@android:color/white"
+                app:trackColorInactive="#66FFFFFF"
+                app:labelBehavior="gone" />
+
+            <TextView
+                android:id="@+id/tvShutterVolume"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="80"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="30x+ local enhance"
+                android:textColor="#CCFFFFFF"
+                android:textSize="14sp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchZoomPostProcess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/Widget.ZoomHundred.Switch" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rowPostProcessStrength"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:text="Strength"
+                android:textColor="#CCFFFFFF"
+                android:textSize="13sp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/sliderPostProcessStrength"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:valueFrom="0"
+                android:valueTo="100"
+                android:value="55"
+                android:stepSize="5"
+                app:haloColor="#44FFFFFF"
+                app:thumbColor="@android:color/white"
+                app:trackColorActive="@android:color/white"
+                app:trackColorInactive="#66FFFFFF"
+                app:labelBehavior="gone" />
+
+            <TextView
+                android:id="@+id/tvPostProcessStrength"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="55"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

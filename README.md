@@ -10,7 +10,7 @@ Open 100x is an experimental Android camera app focused on extreme zoom workflow
 
 This repository includes the current beta APK for quick testing.
 
-[Download Open 100x Beta APK](https://github.com/Kenneth-Cho-InfoSec/Open_100x/raw/main/release/Open100x-beta.apk)
+[Download Open 100x Beta APK](https://github.com/Kenneth-Cho-InfoSec/Open_100x/releases/download/v0.1.0-beta/Open100x-beta.apk)
 
 Because this is a private repository, the download link requires GitHub access to `Kenneth-Cho-InfoSec/Open_100x`.
 

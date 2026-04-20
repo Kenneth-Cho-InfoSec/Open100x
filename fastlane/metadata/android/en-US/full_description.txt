@@ -1,0 +1,13 @@
+Open 100x is an Android camera app built to give more phones access to extreme 100x zoom-style shooting, even when the stock camera app does not expose that kind of range.
+
+It combines native camera zoom with digital crop to reach up to 100x, and adds controls designed for long-range mobile photography. The app includes stability feedback, histogram tools, grid modes, zoom presets, flashlight support, crop nudging, and local post-processing for extreme zoom captures.
+
+Open 100x runs fully on-device. It uses traditional, non-AI image processing only, with no cloud processing and no external APIs.
+
+Current beta notes:
+
+* Android app package: com.example.zoomhundred
+* Up to 100x zoom through native camera zoom plus digital crop
+* Local denoising, smoothing, sharpening, contrast/detail recovery, and crop upscaling
+* Pro-style overlays and anti-shake feedback for high-zoom shooting
+* Device behavior may vary because camera hardware and third-party lens access differ across Android devices

@@ -1,0 +1,41 @@
+Categories:
+  - Multimedia
+License: Unknown
+AuthorName: Kenneth-Cho-InfoSec
+WebSite: https://github.com/Kenneth-Cho-InfoSec/Open_100x
+SourceCode: https://github.com/Kenneth-Cho-InfoSec/Open_100x
+IssueTracker: https://github.com/Kenneth-Cho-InfoSec/Open_100x/issues
+
+AutoName: Open 100x
+Summary: Extreme 100x hybrid zoom camera with local image processing
+Description: |-
+    Open 100x is an Android camera app built to give more phones access to
+    extreme 100x zoom-style shooting, even when the stock camera app does not
+    expose that kind of range.
+
+    It combines native camera zoom with digital crop to reach up to 100x, and
+    adds controls designed for long-range mobile photography, including
+    stability feedback, histogram tools, grid modes, zoom presets, flashlight
+    support, crop nudging, and local post-processing for extreme zoom captures.
+
+    Open 100x runs fully on-device. It uses traditional, non-AI image processing
+    only, with no cloud processing and no external APIs.
+
+RepoType: git
+Repo: https://github.com/Kenneth-Cho-InfoSec/Open_100x.git
+Binaries: https://github.com/Kenneth-Cho-InfoSec/Open_100x/releases/download/v%v/Open100x-beta.apk
+
+Builds:
+  - versionName: '1.0'
+    versionCode: 1
+    commit: v1.0
+    subdir: app
+    gradle:
+      - release
+
+AllowedAPKSigningKeys: fbf7c231a2d5dddc6cce481a93df867641baece2781ab02ffd2b45deeea78ea8
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.0'
+CurrentVersionCode: 1

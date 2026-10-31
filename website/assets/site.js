@@ -17,7 +17,11 @@ function updateFraming() {
 }
 
 function setScene(sceneName) {
-  for (const scene of sceneImages) scene.classList.toggle('is-active', scene.dataset.sceneImage === sceneName);
+  for (const scene of sceneImages) {
+    const active = scene.dataset.sceneImage === sceneName;
+    scene.classList.toggle('is-active', active);
+    if (active && !scene.hasAttribute('src') && scene.dataset.sceneSrc) scene.src = scene.dataset.sceneSrc;
+  }
   updateFraming();
 }
 
@@ -67,4 +71,8 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
   addEventListener('resize', revealPassedContent, { passive: true });
   addEventListener('hashchange', () => setTimeout(revealPassedContent, 0));
   revealPassedContent();
+} else if (!('IntersectionObserver' in window)) {
+  for (const scene of sceneImages) {
+    if (!scene.hasAttribute('src') && scene.dataset.sceneSrc) scene.src = scene.dataset.sceneSrc;
+  }
 }

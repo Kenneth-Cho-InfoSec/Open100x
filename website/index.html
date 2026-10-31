@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#111014">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
 <meta name="description" content="Open100x is an Android still camera that pairs supported camera zoom with digital crop to frame still photos at scales up to 100× on compatible devices.">
     <title>Open100x — Android long-range still camera</title>
     <link rel="stylesheet" href="assets/site.css">
@@ -40,12 +41,12 @@
         <div class="viewfinder" id="viewfinder" data-ui>
           <img class="viewfinder__scene viewfinder__scene--wide is-active" data-scene-image="hero" style="--focus-x:34%;--focus-y:31%" src="assets/open100x-lighthouse-jpg.jpg" alt="" width="1058" height="820" fetchpriority="high">
           <img class="viewfinder__scene viewfinder__scene--crop is-active" data-scene-image="hero" style="--focus-x:34%;--focus-y:31%" src="assets/open100x-lighthouse-jpg.jpg" alt="" width="1058" height="820" fetchpriority="high">
-          <img class="viewfinder__scene viewfinder__scene--wide" data-scene-image="features" style="--focus-x:76%;--focus-y:22%" src="assets/coast-scene-and-hornby-lighthouse-8029083577.jpg" alt="" width="1024" height="770">
-          <img class="viewfinder__scene viewfinder__scene--crop" data-scene-image="features" style="--focus-x:76%;--focus-y:22%" src="assets/coast-scene-and-hornby-lighthouse-8029083577.jpg" alt="" width="1024" height="770">
-          <img class="viewfinder__scene viewfinder__scene--wide" data-scene-image="workflow" style="--focus-x:53%;--focus-y:56%" src="assets/landscape-valley-with-mountain-in-distance.jpg" alt="" width="1920" height="1114">
-          <img class="viewfinder__scene viewfinder__scene--crop" data-scene-image="workflow" style="--focus-x:53%;--focus-y:56%" src="assets/landscape-valley-with-mountain-in-distance.jpg" alt="" width="1920" height="1114">
-          <img class="viewfinder__scene viewfinder__scene--wide" data-scene-image="tutorial" style="--focus-x:53%;--focus-y:46%" src="assets/group-of-twelve-palm-trees-lined-across.jpg" alt="" width="1920" height="1524">
-          <img class="viewfinder__scene viewfinder__scene--crop" data-scene-image="tutorial" style="--focus-x:53%;--focus-y:46%" src="assets/group-of-twelve-palm-trees-lined-across.jpg" alt="" width="1920" height="1524">
+          <img class="viewfinder__scene viewfinder__scene--wide" data-scene-image="features" data-scene-src="assets/coast-scene-and-hornby-lighthouse-8029083577.webp" style="--focus-x:76%;--focus-y:22%" alt="" width="1024" height="770" decoding="async">
+          <img class="viewfinder__scene viewfinder__scene--crop" data-scene-image="features" data-scene-src="assets/coast-scene-and-hornby-lighthouse-8029083577.webp" style="--focus-x:76%;--focus-y:22%" alt="" width="1024" height="770" decoding="async">
+          <img class="viewfinder__scene viewfinder__scene--wide" data-scene-image="workflow" data-scene-src="assets/landscape-valley-with-mountain-in-distance.webp" style="--focus-x:53%;--focus-y:56%" alt="" width="1920" height="1114" decoding="async">
+          <img class="viewfinder__scene viewfinder__scene--crop" data-scene-image="workflow" data-scene-src="assets/landscape-valley-with-mountain-in-distance.webp" style="--focus-x:53%;--focus-y:56%" alt="" width="1920" height="1114" decoding="async">
+          <img class="viewfinder__scene viewfinder__scene--wide" data-scene-image="tutorial" data-scene-src="assets/group-of-twelve-palm-trees-lined-across.webp" style="--focus-x:53%;--focus-y:46%" alt="" width="1920" height="1524" decoding="async">
+          <img class="viewfinder__scene viewfinder__scene--crop" data-scene-image="tutorial" data-scene-src="assets/group-of-twelve-palm-trees-lined-across.webp" style="--focus-x:53%;--focus-y:46%" alt="" width="1920" height="1524" decoding="async">
           <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
           <span class="frame-corner frame-corner--tr" aria-hidden="true"></span>
           <span class="frame-corner frame-corner--bl" aria-hidden="true"></span>
@@ -110,7 +111,7 @@
           </div>
           <p class="source-note">The browser viewfinder at left demonstrates image cropping only. It does not connect to a phone camera, reproduce the app interface or predict final detail.</p>
           <figure class="sample-scene">
-            <img src="assets/coast-scene-and-hornby-lighthouse-8029083577.jpg" alt="Archival black-and-white photograph of Hornby Lighthouse on a rocky Sydney coast." width="1024" height="770" loading="lazy" decoding="async">
+            <img src="assets/coast-scene-and-hornby-lighthouse-8029083577.webp" alt="Archival black-and-white photograph of Hornby Lighthouse on a rocky Sydney coast." width="1024" height="770" loading="lazy" decoding="async">
             <figcaption>Hornby Lighthouse, an archival example scene. It was not captured by Open100x.</figcaption>
           </figure>
         </section>
@@ -126,7 +127,7 @@
           </ol>
           <p class="source-note">Source paths: <code>MainActivity</code>, <code>ProCameraController</code>, <code>AntiShakeController</code>, <code>ExtremeZoomPostProcessor</code>, and the app manifest.</p>
           <figure class="sample-scene sample-scene--wide">
-            <img src="assets/landscape-valley-with-mountain-in-distance.jpg" alt="A watercolor landscape with a broad valley and distant mountain range." width="1920" height="1114" loading="lazy" decoding="async">
+            <img src="assets/landscape-valley-with-mountain-in-distance.webp" alt="A watercolor landscape with a broad valley and distant mountain range." width="1920" height="1114" loading="lazy" decoding="async">
             <figcaption>William Collins’s distant landscape. Example image only; not an Open100x capture.</figcaption>
           </figure>
         </section>
@@ -146,7 +147,7 @@
             <p>The selected lens’s native zoom, focus and stabilization vary by phone. Digital crop enlarges fewer source pixels and cannot recover detail the camera did not capture. Try a lower zoom, better light, a supported telephoto lens or a steadier hold.</p>
           </div>
           <figure class="sample-scene sample-scene--portrait">
-            <img src="assets/group-of-twelve-palm-trees-lined-across.jpg" alt="Archival desert photograph of palms spaced across a broad horizon, with mountains in the distance." width="1920" height="1524" loading="lazy" decoding="async">
+            <img src="assets/group-of-twelve-palm-trees-lined-across.webp" alt="Archival desert photograph of palms spaced across a broad horizon, with mountains in the distance." width="1920" height="1524" loading="lazy" decoding="async">
             <figcaption>Colorado Desert, circa 1904. A historical example scene, not an app sample.</figcaption>
           </figure>
         </section>

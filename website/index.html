@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111014">
+    <meta name="description" content="Open100x is an Android still-camera app that pairs a phone’s supported camera zoom with digital crop for a requested range up to 100×.">
+    <title>Open100x — Android still camera for long-range framing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400;1,7..72,600&family=Rokkitt:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
+    <script>document.documentElement.classList.add('js')</script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-grid">
+      <aside class="visual-rail" aria-label="Illustrative viewfinder demonstration">
+        <div class="viewfinder" id="viewfinder" data-ui>
+          <img class="viewfinder__scene viewfinder__scene--wide is-active" data-scene-image="hero" style="--focus-x:34%;--focus-y:31%" src="assets/open100x-lighthouse-jpg.jpg" alt="" width="1058" height="820" fetchpriority="high">
+          <img class="viewfinder__scene viewfinder__scene--crop is-active" data-scene-image="hero" style="--focus-x:34%;--focus-y:31%" src="assets/open100x-lighthouse-jpg.jpg" alt="" width="1058" height="820" fetchpriority="high">
+          <img class="viewfinder__scene viewfinder__scene--wide" data-scene-image="features" style="--focus-x:76%;--focus-y:22%" src="assets/coast-scene-and-hornby-lighthouse-8029083577.jpg" alt="" width="1024" height="770">
+          <img class="viewfinder__scene viewfinder__scene--crop" data-scene-image="features" style="--focus-x:76%;--focus-y:22%" src="assets/coast-scene-and-hornby-lighthouse-8029083577.jpg" alt="" width="1024" height="770">
+          <img class="viewfinder__scene viewfinder__scene--wide" data-scene-image="workflow" style="--focus-x:53%;--focus-y:56%" src="assets/landscape-valley-with-mountain-in-distance.jpg" alt="" width="1920" height="1114">
+          <img class="viewfinder__scene viewfinder__scene--crop" data-scene-image="workflow" style="--focus-x:53%;--focus-y:56%" src="assets/landscape-valley-with-mountain-in-distance.jpg" alt="" width="1920" height="1114">
+          <img class="viewfinder__scene viewfinder__scene--wide" data-scene-image="tutorial" style="--focus-x:53%;--focus-y:46%" src="assets/group-of-twelve-palm-trees-lined-across.jpg" alt="" width="1920" height="1524">
+          <img class="viewfinder__scene viewfinder__scene--crop" data-scene-image="tutorial" style="--focus-x:53%;--focus-y:46%" src="assets/group-of-twelve-palm-trees-lined-across.jpg" alt="" width="1920" height="1524">
+          <span class="frame-corner frame-corner--tl" aria-hidden="true"></span>
+          <span class="frame-corner frame-corner--tr" aria-hidden="true"></span>
+          <span class="frame-corner frame-corner--bl" aria-hidden="true"></span>
+          <span class="frame-corner frame-corner--br" aria-hidden="true"></span>
+          <div class="viewfinder__readout" aria-hidden="true">
+            <span>Framing demo</span>
+            <strong id="zoom-readout">1×</strong>
+          </div>
+          <div class="viewfinder__control">
+            <label for="zoom-range"><span>Requested scale</span><output id="zoom-output" for="zoom-range">1×</output></label>
+            <input id="zoom-range" type="range" min="1" max="100" value="1" step="1" aria-describedby="zoom-note">
+            <p id="zoom-note">Drag to crop the example scene from 1× to 100×.</p>
+          </div>
+          <p class="viewfinder__caption">Illustrative images only. The crop is not an app capture or an image-quality model.</p>
+        </div>
+      </aside>
+
+      <main class="copy-column" id="main">
+        <header class="site-header">
+          <a class="wordmark" href="#top" aria-label="Open100x home">Open<span>100</span>x</a>
+          <nav aria-label="Main navigation">
+            <a href="#features">Features</a>
+            <a href="#tutorial">Tutorial</a>
+            <a href="#docs">Docs</a>
+            <a href="#compare">Compare</a>
+            <a href="#community">Community</a>
+          </nav>
+        </header>
+
+        <section class="hero section" id="top" aria-labelledby="hero-title" data-scene="hero">
+          <h1 id="hero-title">A still camera<br>for long range</h1>
+          <p class="hero__lead">For Android still photos, Open100x pairs available camera zoom with digital crop for framing up to 100×.</p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="https://github.com/Kenneth-Cho-InfoSec/Open100x/releases/latest">Download the APK</a>
+            <a class="text-link" href="#docs">Read documentation</a>
+            <a class="text-link" href="https://github.com/Kenneth-Cho-InfoSec/Open100x">View on GitHub</a>
+          </div>
+          <p class="hero__detail">Android 10 or later · MIT licensed · device capabilities vary</p>
+        </section>
+
+        <section class="section feature-section" id="features" aria-labelledby="features-title" data-scene="features">
+          <h2 id="features-title">A longer reach, made in software</h2>
+          <p>The repository describes stock camera apps that hide or limit extreme zoom controls. Open100x gives Android still photographers a native-zoom-plus-crop workflow with on-device image processing.</p>
+          <p>It uses the camera’s available native range first, then applies digital crop toward a requested scale up to 100×. The native maximum depends on the phone and selected lens.</p>
+          <div class="feature-copy">
+            <article class="feature-item">
+              <h3>Framing you can set</h3>
+              <p>Choose a zoom preset or move along the zoom rail. The preview and saved capture follow the selected crop when the requested scale exceeds the camera’s native range.</p>
+            </article>
+            <article class="feature-item">
+              <h3>A steadier high-zoom shot</h3>
+              <p>A gyroscope-based steadiness indicator helps show movement. At high zoom, capture can wait briefly for a stable frame, then continue after its timeout.</p>
+            </article>
+            <article class="feature-item">
+              <h3>Controls that follow hardware</h3>
+              <p>Grid overlays, a histogram and manual exposure, white balance or focus controls are available where the selected camera supports them.</p>
+            </article>
+            <article class="feature-item">
+              <h3>Capture stays on the phone</h3>
+              <p>The checked-in manifest requests camera access and does not declare internet access. Optional resize-based smoothing and detail sharpening run locally before the image is saved.</p>
+            </article>
+          </div>
+          <p class="source-note">The browser viewfinder at left demonstrates image cropping only. It does not connect to a phone camera, reproduce the app interface or predict final detail.</p>
+          <figure class="sample-scene">
+            <img src="assets/coast-scene-and-hornby-lighthouse-8029083577.jpg" alt="Archival black-and-white photograph of Hornby Lighthouse on a rocky Sydney coast." width="1024" height="770" loading="lazy" decoding="async">
+            <figcaption>Hornby Lighthouse, an archival example scene. It was not captured by Open100x.</figcaption>
+          </figure>
+        </section>
+
+        <section class="section process-section" id="how-it-works" aria-labelledby="process-title" data-scene="workflow">
+          <h2 id="process-title">How the image moves</h2>
+          <p>The app uses CameraX for preview, still capture and frame analysis. Camera2Interop passes supported camera options through the selected camera pipeline.</p>
+          <ol class="flow-diagram" aria-label="Open100x camera and image data flow">
+            <li><strong>CameraX pipeline</strong><span>Preview, still capture and low-resolution frame analysis.</span></li>
+            <li><strong>Native zoom plus crop</strong><span>Camera2Interop passes supported options; digital crop covers the requested remainder. <a href="https://developer.android.com/reference/androidx/camera/core/ZoomState">CameraX reports a maximum based on device capability.</a></span></li>
+            <li><strong>Settled capture</strong><span>Motion readings can delay high-zoom capture until the frame steadies or times out.</span></li>
+            <li><strong>Local processing and save</strong><span>Optional post-processing runs before MediaStore writes JPEG or WEBP to Pictures/Open100x.</span></li>
+          </ol>
+          <p class="source-note">Source paths: <code>MainActivity</code>, <code>ProCameraController</code>, <code>AntiShakeController</code>, <code>ExtremeZoomPostProcessor</code>, and the app manifest.</p>
+          <figure class="sample-scene sample-scene--wide">
+            <img src="assets/landscape-valley-with-mountain-in-distance.jpg" alt="A watercolor landscape with a broad valley and distant mountain range." width="1920" height="1114" loading="lazy" decoding="async">
+            <figcaption>William Collins’s distant landscape. Example image only; not an Open100x capture.</figcaption>
+          </figure>
+        </section>
+
+        <section class="section tutorial-section" id="tutorial" aria-labelledby="tutorial-title" data-scene="tutorial">
+          <h2 id="tutorial-title">Take your first shot</h2>
+          <p>Use the latest release on an Android 10+ phone with a camera. Lens range, manual settings and stabilization depend on the device.</p>
+          <ol class="tutorial-list">
+            <li><strong>Install the current release.</strong> Open <a href="https://github.com/Kenneth-Cho-InfoSec/Open100x/releases/latest">Latest releases</a>, download the APK, and install it. Android may ask you to allow the app you used to download the file to install apps.</li>
+            <li><strong>Allow camera access.</strong> Open Open100x and grant its camera permission when Android asks. The inspected manifest declares the camera permission only.</li>
+            <li><strong>Set the frame.</strong> Choose a zoom preset or move the zoom control. Start lower, then raise the scale until the subject fits the viewfinder.</li>
+            <li><strong>Hold and capture.</strong> At higher zoom, brace the phone and watch the steadiness indicator. Use the shutter; if settling is enabled, the app may wait briefly before capture.</li>
+            <li><strong>Find the image.</strong> Open your gallery or file browser and look under <code>Pictures/Open100x</code>. The selected output format is JPEG or WEBP.</li>
+          </ol>
+          <div class="note-block">
+            <h3>If the result looks different from the preview</h3>
+            <p>The selected lens’s native zoom, focus and stabilization vary by phone. Digital crop enlarges fewer source pixels and cannot recover detail the camera did not capture. Try a lower zoom, better light, a supported telephoto lens or a steadier hold.</p>
+          </div>
+          <figure class="sample-scene sample-scene--portrait">
+            <img src="assets/group-of-twelve-palm-trees-lined-across.jpg" alt="Archival desert photograph of palms spaced across a broad horizon, with mountains in the distance." width="1920" height="1524" loading="lazy" decoding="async">
+            <figcaption>Colorado Desert, circa 1904. A historical example scene, not an app sample.</figcaption>
+          </figure>
+        </section>
+
+        <section class="section docs-section" id="docs" aria-labelledby="docs-title">
+          <h2 id="docs-title">Build and inspect</h2>
+          <p>Open100x is an Android application written in Kotlin. The checked-in project targets Android API 35, supports API 29 and later, and uses Kotlin/JVM 17 with CameraX 1.4.1.</p>
+
+          <h3>Build from source</h3>
+          <p>With a JDK and Android SDK configured, build the debug app from the repository root:</p>
+          <pre><code><span class="code-comment"># Clone the public repository</span>
+<span class="code-command">git</span> clone https://github.com/Kenneth-Cho-InfoSec/Open100x.git
+<span class="code-command">cd</span> Open100x
+
+<span class="code-comment"># Assemble the debug APK</span>
+<span class="code-command">./gradlew</span> assembleDebug</code></pre>
+          <p>The Gradle output is under <code>app/build/outputs/apk/debug/</code>. A connected test device can receive the APK with <code>adb install app/build/outputs/apk/debug/app-debug.apk</code>. The repository’s current Android CI workflow assembles a debug APK.</p>
+
+          <h3>Configuration and data</h3>
+          <p>There is no documented command-line interface, SDK, environment-variable configuration or remote service. Camera options are selected in the app and depend on the hardware’s reported capabilities. Captures are written through Android MediaStore; supported output formats are JPEG and WEBP.</p>
+          <p>The current source manifest declares <code>CAMERA</code> and not <code>INTERNET</code>. Image capture, post-processing and saving are implemented on-device. Review permission and storage behavior in <code>app/src/main/AndroidManifest.xml</code>, <code>MainActivity</code> and <code>ExtremeZoomPostProcessor</code> when updating the app.</p>
+
+          <h3>Limits and troubleshooting</h3>
+          <ul class="reading-list">
+            <li><strong>Zoom stops below 100×:</strong> the value is a requested hybrid framing target, not optical magnification. Camera support and selected lens affect the native portion; the remaining crop is digital.</li>
+            <li><strong>Manual controls are unavailable:</strong> the app queries each camera’s capabilities. Switch lenses or use the controls the device reports.</li>
+            <li><strong>No image appears:</strong> check camera permission, finish the capture, then look in <code>Pictures/Open100x</code>. Check free storage and report reproducible issues on GitHub.</li>
+            <li><strong>Build fails:</strong> confirm JDK 17 and Android SDK configuration, accept required SDK licenses, then review the Gradle output.</li>
+          </ul>
+          <p>For development, start with the source and <a href="https://github.com/Kenneth-Cho-InfoSec/Open100x/issues">issue tracker</a>. No separate contribution guide was present at the repository root when this site was prepared.</p>
+          <h3>Development and contributions</h3>
+          <p>Before proposing a camera change, describe the phone, Android version, selected lens and requested scale that reproduce it. Build with <code>./gradlew assembleDebug</code>. The project README says not to commit signing keys, <code>keystore.properties</code>, <code>local.properties</code>, Gradle caches or generated build output. Avoid attaching private photographs to public issues.</p>
+        </section>
+
+        <section class="section limits-section" id="limits" aria-labelledby="limits-title">
+          <h2 id="limits-title">What the app does not promise</h2>
+          <details open>
+            <summary>100× is a framing target</summary>
+            <p>It is a requested combination of device-native zoom and digital crop. It does not mean 100× optical zoom, equal results across phones or a guaranteed amount of resolved detail.</p>
+          </details>
+          <details>
+            <summary>Camera controls vary by device</summary>
+            <p>Native zoom, autofocus, lens choice, stabilization, histogram and manual settings depend on the selected camera and its reported capabilities.</p>
+          </details>
+          <details>
+            <summary>Enhancement is local image processing</summary>
+            <p>The post-processor applies resize-based smoothing and contrast or detail sharpening, with optional upscaling capped at 24 megapixels. It is not an AI reconstruction model.</p>
+          </details>
+          <details>
+            <summary>The inspected workflow is still photography</summary>
+            <p>This site documents still capture. It makes no claim about video, RAW output or a measured image-quality result.</p>
+          </details>
+        </section>
+
+        <section class="section comparison-section" id="compare" aria-labelledby="compare-title">
+          <h2 id="compare-title">Choose the camera for the job</h2>
+          <p>These projects serve different camera workflows. The table uses their published documentation, checked 31 October 2026.</p>
+          <div class="table-scroll" role="region" aria-label="Camera app comparison" tabindex="0">
+            <table>
+              <thead><tr><th scope="col">Project</th><th scope="col">What its published docs describe</th><th scope="col">Best fit</th><th scope="col">Distribution and license</th></tr></thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><a href="https://github.com/Kenneth-Cho-InfoSec/Open100x">Open100x</a></th>
+                  <td>Android still capture using the available native zoom with digital crop to a requested scale up to 100×; device-aware controls and local processing.</td>
+                  <td>Trying a dedicated high-zoom still-camera workflow on supported Android hardware.</td>
+                  <td>Manual APK install from GitHub releases; Android 10+; MIT.</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="https://opencamera.sourceforge.io/">Open Camera</a></th>
+                  <td>General-purpose photo and video camera with a broad set of controls, including RAW and histogram options on supported devices.</td>
+                  <td>A wider still and video feature set, with many configurable camera options.</td>
+                  <td>Google Play or F-Droid install; Android 6+ per F-Droid; GPL-3.0-or-later.</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="https://github.com/GrapheneOS/Camera">GrapheneOS Camera</a></th>
+                  <td>CameraX-based photo, video, QR and barcode capture. Its privacy policy says it uses camera access without network connections, analytics or telemetry.</td>
+                  <td>GrapheneOS users who want the project’s privacy-focused general camera.</td>
+                  <td>GrapheneOS project distribution and source; MIT. Availability of camera modes depends on device and OS.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="source-links">
+            <li><a href="https://opencamera.sourceforge.io/">Open Camera feature and requirements page</a></li>
+            <li><a href="https://f-droid.org/en/packages/net.sourceforge.opencamera/">Open Camera on F-Droid</a></li>
+            <li><a href="https://grapheneos.org/usage#camera">GrapheneOS camera guide</a></li>
+            <li><a href="https://grapheneos.org/camera-privacy-policy">GrapheneOS Camera privacy policy</a></li>
+          </ul>
+          <p>Open100x publishes Kotlin source and issues, with no external API or plugin system documented in the inspected repository. Its APK updates come from GitHub releases. Open Camera offers Play and F-Droid distribution; GrapheneOS Camera fits the GrapheneOS camera workflow. For broader photo and video controls, Open Camera is a better fit. For GrapheneOS’s privacy-focused general camera, choose GrapheneOS Camera. Choose Open100x to explore high-zoom still framing and its digital-crop tradeoffs. Check each project’s latest releases and issue activity when maintenance cadence matters to your choice.</p>
+        </section>
+
+        <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">Common questions</h2>
+          <div class="faq-copy">
+            <p><strong>Does 100× mean optical zoom?</strong> No. It is a requested hybrid framing scale that combines available native zoom with a digital crop.</p>
+            <p><strong>Will every phone reach the same result?</strong> No. Camera hardware and selected lens determine native zoom, focus and available controls; digital crop cannot add captured detail.</p>
+            <p><strong>Does Open100x record video?</strong> This site documents the still-capture flow in the inspected source. It does not claim video support.</p>
+            <p><strong>Where do captures go?</strong> The app writes to Android MediaStore under <code>Pictures/Open100x</code> in JPEG or WEBP format.</p>
+            <p><strong>Does it need an account or server?</strong> The checked-in manifest declares camera access and no internet permission; no remote service is documented in the inspected capture workflow.</p>
+            <p><strong>What does post-processing do?</strong> It applies local resize-based smoothing and sharpening, with optional upscaling capped at 24 megapixels. It does not use AI reconstruction.</p>
+            <p><strong>Which Android version is required?</strong> Android 10 / API 29 or later, according to the app’s minimum SDK.</p>
+            <p><strong>Where can I report an issue?</strong> Use the <a href="https://github.com/Kenneth-Cho-InfoSec/Open100x/issues">GitHub issue tracker</a> and include the Android version and camera or lens involved.</p>
+          </div>
+        </section>
+
+        <section class="closing-section" id="community" aria-labelledby="community-title">
+          <h2 id="community-title">Try 100× framing</h2>
+          <p>Download the latest Android APK, inspect the Kotlin source or report a reproducible issue.</p>
+          <a class="button button--dark" href="https://github.com/Kenneth-Cho-InfoSec/Open100x/releases/latest">Get the latest APK</a>
+          <div class="community-links">
+            <a href="https://github.com/Kenneth-Cho-InfoSec/Open100x">Source repository</a>
+            <a href="https://github.com/Kenneth-Cho-InfoSec/Open100x/issues">Issues</a>
+            <a href="https://github.com/Kenneth-Cho-InfoSec/Open100x/releases">Releases</a>
+            <a href="https://github.com/Kenneth-Cho-InfoSec/Open100x/blob/main/LICENSE">MIT license</a>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <span>Open100x · Android camera</span>
+          <span class="footer-links"><a href="#top">Top</a><a href="#docs">Docs</a><a href="#community">GitHub</a></span>
+          <span class="art-credit">Pictures: <a href="https://commons.wikimedia.org/wiki/File:Joseph_Wright_of_Derby_(1734-1797)_-_A_Moonlight_with_a_Lighthouse,_Coast_of_Tuscany_-_N05882_-_National_Gallery.jpg">“A Moonlight with a Lighthouse, Coast of Tuscany”</a> by Joseph Wright of Derby, public domain; <a href="https://commons.wikimedia.org/wiki/File:Coast_Scene_and_Hornby_Lighthouse_(8029083577).jpg">“Coast Scene and Hornby Lighthouse”</a>, Powerhouse Museum, public domain; <a href="https://commons.wikimedia.org/wiki/File:William_Collins_-_Landscape,_Valley_with_Mountain_in_Distance_-_B1977.14.4970_-_Yale_Center_for_British_Art.jpg">“Landscape: Valley with Mountain in Distance”</a> by William Collins, CC0; <a href="https://commons.wikimedia.org/wiki/File:Group_of_twelve_palm_trees_lined_across_the_horizon_in_the_Colorado_Desert,_northeast_of_Palm_Springs_near_Indio,_ca.1904_(CHS-2285).jpg">Colorado Desert palm trees, circa 1904</a>, public domain. Via Wikimedia Commons; see the <a href="assets/credits.json">full picture credits</a>.</span>
+        </footer>
+      </main>
+    </div>
+    <script src="assets/site.js" defer></script>
+  </body>
+</html>

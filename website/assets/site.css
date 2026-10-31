@@ -11,8 +11,8 @@
   --night: #111014;
   --inline-surface: #e7e3dc;
   --details-surface: #e7e4de;
-  --serif: "Literata", Georgia, serif;
-  --display: "Rokkitt", Georgia, serif;
+  --serif: Georgia, "Times New Roman", serif;
+  --display: Georgia, "Times New Roman", serif;
   --ease-out: cubic-bezier(.22, 1, .36, 1);
   --ease-expo: cubic-bezier(.16, 1, .3, 1);
 }
